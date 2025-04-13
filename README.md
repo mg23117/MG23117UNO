@@ -90,8 +90,10 @@ solucion = resolver_lu(A, b)
 print("Solución con descomposición LU:", solucion)
 ```
 ## Crammer
-from MG23117UNO import cramer
 ```python
+
+from MG23117UNO import cramer
+
 A = [[2, -1, 3],
     [1, 0, 2],
     [3, 1, 4]]
