@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="MG23117UNO",
-    version="0.1.0",
+    version="0.1.2",
     author="Kevin Martínez",
     author_email="mg23117@ues.edu.sv",
     description="Resolución de sistemas de ecuaciones con algunos métodos matematicos conocidos",

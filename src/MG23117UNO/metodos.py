@@ -1,5 +1,4 @@
-
-from fraccion import Fraccion
+from .fraccion import Fraccion
 import numpy as np
 
 def gauss_jordan(coefficients, ind_terms):
@@ -335,8 +334,11 @@ def resolver_lu(A, b):
     
     return x
 
-solucion = resolver_lu(A, b)
-print("Solución con descomposición LU:", solucion)
+if __name__ == "__main__":
+    A = [[2, 3, 1], [4, 7, 3], [6, 18, 5]]  # <-- Definir A y b aquí
+    b = [1, 2, 3]
+    solucion = resolver_lu(A, b)
+    print("Solución con descomposición LU:", solucion)
 
 # RESOLVER POR CRAMMER
 def cramer(A, b, tol=1e-10):
@@ -384,6 +386,9 @@ A = [[2, -1, 3],
 
 b = [5, 3, 10]
 
-solucion = cramer(A, b)
-print("Solución por Cramer:", solucion)
+if __name__ == "__main__":
+    A = [[2, -1, 3], [1, 0, 2], [3, 1, 4]]
+    b = [5, 3, 10]
+    solucion = cramer(A, b)
+    print("Solución por Cramer:", solucion)
 
