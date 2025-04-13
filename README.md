@@ -13,8 +13,6 @@ funciones las cuales son no lineales. Entonces, los métodos que vamos a encontr
 
 ## Ejemplos de uso para cada método
 
-## Ejemplos de uso para cada método
-
 ### Eliminación de Gauss:
 ```python
 from MG23117UNO import gauss_elimination  # Corrección de mayúsculas
@@ -27,9 +25,10 @@ if solucion is not None:
     print("Solución por Gauss:", solucion)
 else:
     print("El sistema no tiene solución única.")
+```
 
-# Gauss-Jordan
-
+## Gauss-Jordan
+```python
 from MG23117UNO import gauss_jordan
 
 coefficients = [[4, 2], [-2, 1]]
@@ -38,9 +37,10 @@ ind_terms = [8, -3]
 solution = gauss_jordan(coefficients, ind_terms)
 print("Solución con Gauss-Jordan:")
 print(solution)
+```
 
-# Jacobi:
-
+## Jacobi:
+```python
 from mg23117uno import jacobi
 import numpy as np
 
@@ -52,9 +52,9 @@ b = np.array([7.85, -19.3, 71.4], dtype=float)
 
 solucion = jacobi(A, b)
 print(f"Solución por Jacobi: {solucion}")
-
-# Gauss-Seidel
-
+```
+## Gauss-Seidel
+```python
 from metodosnumericospy import gauss_seidel
 import numpy as np
 
@@ -66,17 +66,19 @@ b = np.array([4, 7, 3], dtype=float)
 
 solucion = gauss_seidel(A, b)
 print(f"Solución por Gauss-Seidel: {solucion}")
+```
 
-# Bisección
-
+## Bisección
+```python
 from metodosnumericospy import biseccion
 
 funcion = lambda x: x**4 + 3*x**3 - 2
 raiz, iteraciones = biseccion(funcion, 0, 1)
 print(f"Raíz de la función por bisección: {raiz:.6f}, encontrada en {iteraciones} iteraciones.")
+```
 
-# Descomposición LU
-
+## Descomposición LU
+```python
 from MG23117UNO import resolver_lu
 
 A = [[2, 3, 1],
@@ -86,10 +88,10 @@ b = [1, 2, 3]
 
 solucion = resolver_lu(A, b)
 print("Solución con descomposición LU:", solucion)
-
-# CRAMMER
+```
+## Crammer
 from MG23117UNO import cramer
-
+```python
 A = [[2, -1, 3],
     [1, 0, 2],
     [3, 1, 4]]
